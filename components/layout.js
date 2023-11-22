@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
+import Footer from './footer';
 
 const name = 'Dongku Kim';
 export const siteTitle = 'Next.js Sample Website';
@@ -64,6 +65,7 @@ export default function Layout({ children, home }) {
           <Link href="/">← Back to home</Link>
         </div>
       )}
+      <Footer />
     </div>
   );
 }
