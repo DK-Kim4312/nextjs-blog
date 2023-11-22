@@ -3,7 +3,6 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
-import Footer from './footer';
 
 const name = 'Dongku Kim';
 export const siteTitle = 'Next.js Sample Website';
@@ -65,7 +64,18 @@ export default function Layout({ children, home }) {
           <Link href="/">← Back to home</Link>
         </div>
       )}
-      <Footer />
+      <footer className={styles.footer}>
+        <a
+          href="https://nextjs.org/learn-pages-router/basics/create-nextjs-app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Powered by{" "}
+          <span className={styles.logo}>
+            <Image src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Vercel_logo_black.svg" alt="Vercel Logo" height={16} />
+          </span>
+        </a>
+      </footer>
     </div>
   );
 }
